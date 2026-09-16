@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VIVERO SAN JOSE | Plantas y tierra en Bogotá</title>
+    <meta
+      name="description"
+      content="VIVERO  SAN JOSE en Bogotá. Venta de duranta, pichones, eugenias, suculentas, bonsais, cactus, orquídeas, bultos de tierra y más. Compra por unidad o docenas."
+    />
+    <meta name="theme-color" content="#264d2c" />
+    <meta property="og:title" content="VIVERO SAN JOSE" />
+    <meta
+      property="og:description"
+      content="Plantas, suculentas, bonsais, cactus, orquídeas y bultos de tierra en Calle 183 N 65-75, Bogotá, DC."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80"
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://wa.me" />
+    <style>
+      :root {
+        color-scheme: light;
+        --leaf: #264d2c;
+        --leaf-2: #3f6b3e;
+        --moss: #718746;
+        --terracotta: #bd6234;
+        --sun: #f0c766;
+        --cream: #fffaf0;
+        --paper: #ffffff;
+        --ink: #182019;
+        --muted: #59645b;
+        --line: rgba(38, 77, 44, 0.18);
+        --shadow: 0 18px 55px rgba(28, 44, 31, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--cream);
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+        background: rgba(24, 32, 25, 0.78);
+        color: white;
+        backdrop-filter: blur(16px);
+      }
+
+      .nav {
+        width: min(1120px, calc(100% - 32px));
+        min-height: 68px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: grid;
+        gap: 1px;
+        text-decoration: none;
+      }
+
+      .brand strong {
+        font-size: clamp(0.98rem, 1.6vw, 1.18rem);
+        letter-spacing: 0;
+      }
+
+      .brand span {
+        font-size: 0.76rem;
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 0.92rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+      }
+
+      .wa-button,
+      .primary-button {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: 0;
+        padding: 0 18px;
+        background: #22c55e;
+        color: #06230f;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 10px 24px rgba(20, 139, 69, 0.28);
+      }
+
+      .wa-button svg,
+      .primary-button svg {
+        width: 19px;
+        height: 19px;
+        flex: 0 0 auto;
+      }
+
+      .hero {
+        min-height: calc(100vh - 68px);
+        display: grid;
+        align-items: end;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        color: white;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(90deg, rgba(10, 24, 12, 0.82), rgba(10, 24, 12, 0.44) 52%, rgba(10, 24, 12, 0.16)),
+          url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1800&q=82") center / cover;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 38%;
+        z-index: -1;
+        background: linear-gradient(0deg, rgba(255, 250, 240, 1), rgba(255, 250, 240, 0));
+      }
+
+      .hero-inner {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 88px 0 110px;
+      }
+
+      .eyebrow {
+        width: fit-content;
+        margin-bottom: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 999px;
+        padding: 7px 12px;
+        background: rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 840px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3.2rem, 8vw, 6.8rem);
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      .hero-copy {
+        max-width: 640px;
+        margin-top: 22px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(1.04rem, 2vw, 1.28rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .secondary-button {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        border-radius: 8px;
+        padding: 0 18px;
+        background: rgba(255, 255, 255, 0.14);
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .quick-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        width: min(1120px, calc(100% - 32px));
+        margin: -58px auto 0;
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .info-tile {
+        min-height: 116px;
+        padding: 22px;
+        background: var(--paper);
+        border-right: 1px solid var(--line);
+      }
+
+      .info-tile:last-child {
+        border-right: 0;
+      }
+
+      .info-tile span {
+        display: block;
+        color: var(--terracotta);
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .info-tile strong {
+        display: block;
+        margin-top: 6px;
+        font-size: 1.02rem;
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      .section {
+        padding: 86px 0;
+      }
+
+      .section.alt {
+        background: #f3eadb;
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.48fr);
+        gap: 42px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--leaf);
+        font-size: clamp(2.2rem, 4.4vw, 4rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .section-head p,
+      .lead {
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .catalog {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+
+      .plant-card {
+        min-height: 320px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        box-shadow: 0 8px 24px rgba(38, 77, 44, 0.07);
+      }
+
+      .plant-card img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        background: #dfe7d7;
+      }
+
+      .plant-card div {
+        padding: 16px;
+      }
+
+      .plant-card h3 {
+        color: var(--leaf);
+        font-size: 1.06rem;
+      }
+
+      .plant-card p {
+        margin-top: 7px;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 42px;
+        align-items: center;
+      }
+
+      .photo-stack {
+        display: grid;
+        grid-template-columns: 1fr 0.72fr;
+        gap: 14px;
+      }
+
+      .photo-stack img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .photo-stack img:first-child {
+        height: 430px;
+      }
+
+      .photo-stack img:last-child {
+        height: 280px;
+        align-self: end;
+      }
+
+      .checks {
+        display: grid;
+        gap: 13px;
+        margin-top: 26px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .checks li {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 12px;
+        align-items: start;
+        color: var(--muted);
+      }
+
+      .checks svg {
+        width: 28px;
+        height: 28px;
+        color: var(--terracotta);
+      }
+
+      .notice-band {
+        background: var(--leaf);
+        color: white;
+      }
+
+      .notice-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        overflow: hidden;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      .notice {
+        min-height: 176px;
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .notice svg {
+        width: 28px;
+        height: 28px;
+        color: var(--sun);
+      }
+
+      .notice strong {
+        display: block;
+        margin-top: 16px;
+        font-size: 1.05rem;
+      }
+
+      .notice p {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.94rem;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(290px, 0.5fr);
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .contact-panel {
+        border-radius: 8px;
+        padding: clamp(26px, 5vw, 44px);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        box-shadow: 0 8px 24px rgba(38, 77, 44, 0.07);
+      }
+
+      .contact-panel h2 {
+        margin-bottom: 18px;
+      }
+
+      .contact-row {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        padding: 16px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-row svg {
+        width: 26px;
+        height: 26px;
+        color: var(--leaf-2);
+      }
+
+      .contact-row strong {
+        display: block;
+        color: var(--leaf);
+      }
+
+      .contact-row span {
+        display: block;
+        margin-top: 3px;
+        color: var(--muted);
+      }
+
+      .map-link {
+        min-height: 100%;
+        border-radius: 8px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        text-decoration: none;
+        background:
+          linear-gradient(180deg, rgba(24, 32, 25, 0.1), rgba(24, 32, 25, 0.82)),
+          url("https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=900&q=80") center / cover;
+        box-shadow: var(--shadow);
+      }
+
+      .map-link strong {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .map-link span {
+        margin-top: 10px;
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      footer {
+        padding: 30px 0;
+        background: #172118;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 0.9rem;
+      }
+
+      .footer-inner {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .float-wa {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 30;
+        width: 58px;
+        height: 58px;
+        border-radius: 999px;
+        padding: 0;
+      }
+
+      @media (max-width: 900px) {
+        .nav {
+          min-height: 62px;
+        }
+
+        .nav-links a:not(.wa-button) {
+          display: none;
+        }
+
+        .hero {
+          min-height: 760px;
+        }
+
+        .hero-inner {
+          padding: 76px 0 118px;
+        }
+
+        .quick-info,
+        .section-head,
+        .split,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+
+        .quick-info {
+          margin-top: -48px;
+        }
+
+        .info-tile {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .catalog,
+        .notice-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 620px) {
+        .nav {
+          width: min(100% - 22px, 1120px);
+        }
+
+        .brand span {
+          display: none;
+        }
+
+        .wa-button {
+          padding: 0 13px;
+          font-size: 0.9rem;
+        }
+
+        .hero {
+          min-height: 720px;
+        }
+
+        .hero-inner,
+        .wrap,
+        .quick-info,
+        .footer-inner {
+          width: min(100% - 22px, 1120px);
+        }
+
+        .hero-actions {
+          display: grid;
+        }
+
+        .catalog,
+        .notice-grid,
+        .photo-stack {
+          grid-template-columns: 1fr;
+        }
+
+        .plant-card {
+          min-height: auto;
+        }
+
+        .plant-card img {
+          height: 215px;
+        }
+
+        .photo-stack img:first-child,
+        .photo-stack img:last-child {
+          height: 260px;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GardenStore",
+        "name": "VIVERO SAN JOSE",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle 183 N 65-75",
+          "addressLocality": "Bogotá",
+          "addressRegion": "Bogotá, DC",
+          "addressCountry": "CO"
+        },
+        "telephone": "+573115176962",
+        "paymentAccepted": "Efectivo, Nequi",
+        "areaServed": "Bogotá, DC"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="VIVERO SAN JOSE">
+          <strong>VIVERO SAN JOSE</strong>
+          <span>Calle 183 N 65-75, Bogotá</span>
+        </a>
+        <div class="nav-links">
+          <a href="#plantas">Plantas</a>
+          <a href="#compras">Compras</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a
+            class="wa-button"
+            href="https://wa.me/573115176962?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20plantas%20en%20VIVERO%20NUEVO%20SAN%20JOSE."
+            target="_blank"
+            rel="noopener"
+            aria-label="Escribir por WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <path d="M19 11.7a7.1 7.1 0 0 1-10.5 6.2L5 19l1.1-3.4A7.1 7.1 0 1 1 19 11.7Z" stroke="currentColor" stroke-width="2" />
+              <path d="M9.4 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2.1.4-.1.6l-.4.5c.6 1 1.4 1.8 2.5 2.4l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.2.4.4.4.7 0 .7-.6 1.4-1.3 1.5-1.1.1-2.7-.4-4.2-1.8-1.5-1.4-2.3-3-2.4-4.2 0-.5.1-.9.3-1.3Z" fill="currentColor" />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-label="Vivero con plantas ornamentales">
+        <div class="hero-inner">
+          <div class="eyebrow">Plantas, tierra y asesoría de compra en Bogotá</div>
+          <h1>VIVERO SAN JOSE</h1>
+          <p class="hero-copy">
+            Encuentra duranta, pichones, eugenias, suculentas, bonsais, cactus, orquídeas,
+            bultos de tierra y muchas plantas más para tu hogar, negocio o jardín.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="primary-button"
+              href="https://wa.me/573115176962?text=Hola%2C%20quiero%20comprar%20plantas%20o%20bultos%20de%20tierra%20en%20VIVERO%20SAN%20JOSE."
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <path d="M19 11.7a7.1 7.1 0 0 1-10.5 6.2L5 19l1.1-3.4A7.1 7.1 0 1 1 19 11.7Z" stroke="currentColor" stroke-width="2" />
+                <path d="M9.4 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2.1.4-.1.6l-.4.5c.6 1 1.4 1.8 2.5 2.4l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.2.4.4.4.7 0 .7-.6 1.4-1.3 1.5-1.1.1-2.7-.4-4.2-1.8-1.5-1.4-2.3-3-2.4-4.2 0-.5.1-.9.3-1.3Z" fill="currentColor" />
+              </svg>
+              Pedir por WhatsApp
+            </a>
+            <a class="secondary-button" href="#plantas">Ver plantas disponibles</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-info" aria-label="Información rápida">
+        <div class="info-tile">
+          <span>Dirección</span>
+          <strong>Calle 183 N 65-75, Bogotá, DC</strong>
+        </div>
+        <div class="info-tile">
+          <span>Ventas</span>
+          <strong>Por unidad y/o docenas</strong>
+        </div>
+        <div class="info-tile">
+          <span>Pagos</span>
+          <strong>Se acepta pago en efectivo y Nequi</strong>
+        </div>
+      </section>
+
+      <section class="section" id="plantas">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Plantas comunes y favoritas del vivero</h2>
+            <p>
+              Tenemos especies ornamentales, plantas de interior y exterior, opciones pequeñas para regalo,
+              árboles trabajados y tierra lista para tus materas o siembras.
+            </p>
+          </div>
+          <div class="catalog">
+            <article class="plant-card">
+              <img src="assets/duranta.png" alt="Duranta verde amarilla en bolsas de vivero" />
+              <div>
+                <h3>Duranta</h3>
+                <p>Follaje verde amarillo ideal para setos, bordes, entradas y zonas verdes.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="assets/eugenias.png" alt="Eugenias en bolsas de vivero" />
+              <div>
+                <h3>Eugenias</h3>
+                <p>Plantas de porte alto y follaje brillante para cercas vivas y decoración exterior.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="assets/suculentas.png" alt="Suculentas en materas" />
+              <div>
+                <h3>Suculentas</h3>
+                <p>Variedad de formas y tamaños para interiores, escritorios, balcones y regalos.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="assets/cactus.png" alt="Cactus en matera" />
+              <div>
+                <h3>Cactus</h3>
+                <p>Plantas resistentes y decorativas, disponibles en diferentes tamaños y presentaciones.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="https://images.unsplash.com/photo-1599598177991-ec67b5c37318?auto=format&fit=crop&w=700&q=80" alt="Bonsai en maceta" />
+              <div>
+                <h3>Bonsais</h3>
+                <p>Piezas decorativas con carácter para espacios tranquilos y rincones especiales.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="assets/orquideas.png" alt="Orquídea rosada florecida" />
+              <div>
+                <h3>Orquídeas</h3>
+                <p>Flores elegantes para hogar, oficina o detalles con una presencia más delicada.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="assets/pichones.png" alt="Pichones en bolsas de vivero" />
+              <div>
+                <h3>Pichones y más</h3>
+                <p>Pregunta por disponibilidad de pichones, plantas pequeñas y referencias de temporada.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=700&q=80" alt="Plantas de interior en materas" />
+              <div>
+                <h3>Plantas de interior</h3>
+                <p>Opciones resistentes y decorativas para renovar espacios con verde natural.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="assets/bultos de tierra.jpg" alt="Herramientas de siembra y tierra" />
+              <div>
+                <h3>Bultos de tierra</h3>
+                <p>Tierra para siembra.</p>
+              </div>
+            </article>
+            <article class="plant-card">
+              <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=700&q=80" alt="Variedad de plantas en vivero" />
+              <div>
+                <h3>Otras variedades</h3>
+                <p>Contáctanos para consultar existencias, tamaños y cantidades disponibles.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="compras">
+        <div class="wrap split">
+          <div class="photo-stack" aria-label="Galería del vivero">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80" alt="Mesa con plantas de vivero" />
+            <img src="assets/materas de barro.jpg alt="Plantas en materas listas para venta" />
+          </div>
+          <div>
+            <h2>Compra fácil por WhatsApp o en el vivero</h2>
+            <p class="lead">
+              Te ayudamos a confirmar disponibilidad, cantidades, tamaños y precio antes de separar tu compra.
+            </p>
+            <ul class="checks">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span>Venta por unidad y/o docenas, según la planta y la cantidad que necesites.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span>Se acepta pago en efectivo y Nequi.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span>El envío de la compra se acuerda directamente por WhatsApp según destino y volumen.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span>No se realizan labores de jardinería a domicilio.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section notice-band">
+        <div class="wrap">
+          <div class="notice-grid">
+            <div class="notice">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 11h10M7 15h7M7 7h10M5 21h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+              <strong>Consulta existencias</strong>
+              <p>La disponibilidad puede variar por temporada, tamaño y llegada de nuevas plantas.</p>
+            </div>
+            <div class="notice">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M4 7h16v10H4zM7 11h3M15 15h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <strong>Pagos en efectivo y Nequi</strong>
+            </div>
+            <div class="notice">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M3 8h11v8H3zM14 11h3l3 3v2h-6zM6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <strong>Envíos acordados</strong>
+              <p>El transporte se coordina por WhatsApp de acuerdo con la compra y la ubicación.</p>
+            </div>
+            <div class="notice">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 3v18M7 8c0-2.5 2-5 5-5s5 2.5 5 5c0 3-2.4 5-5 5s-5-2-5-5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <strong>Sin jardinería a domicilio</strong>
+              <p>La atención se enfoca en venta de plantas, tierra e insumos disponibles en el vivero.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ubicacion">
+        <div class="wrap contact">
+          <div class="contact-panel">
+            <h2>Visítanos o escríbenos</h2>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" stroke="currentColor" stroke-width="2" /><path d="M12 10.5h.01" stroke="currentColor" stroke-width="4" stroke-linecap="round" /></svg>
+              <div>
+                <strong>Calle 183 N 65-75</strong>
+                <span>Bogotá, DC</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M19 11.7a7.1 7.1 0 0 1-10.5 6.2L5 19l1.1-3.4A7.1 7.1 0 1 1 19 11.7Z" stroke="currentColor" stroke-width="2" /><path d="M9.4 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2.1.4-.1.6l-.4.5c.6 1 1.4 1.8 2.5 2.4l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.2.4.4.4.7 0 .7-.6 1.4-1.3 1.5-1.1.1-2.7-.4-4.2-1.8-1.5-1.4-2.3-3-2.4-4.2 0-.5.1-.9.3-1.3Z" fill="currentColor" /></svg>
+              <div>
+                <strong>WhatsApp: +57 311 517 6962</strong>
+                <span>Escríbenos para cotizar plantas, docenas, tierra y envío.</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M4 6h16v12H4zM4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <div>
+                <strong>Pagos en efectivo o Nequi</strong>
+                <span>Pagos en efectivo o Nequi.</span>
+              </div>
+            </div>
+            <a
+              class="wa-button"
+              href="https://wa.me/573115176962?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20plantas%20y%20bultos%20de%20tierra."
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <path d="M19 11.7a7.1 7.1 0 0 1-10.5 6.2L5 19l1.1-3.4A7.1 7.1 0 1 1 19 11.7Z" stroke="currentColor" stroke-width="2" />
+                <path d="M9.4 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2.1.4-.1.6l-.4.5c.6 1 1.4 1.8 2.5 2.4l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.2.4.4.4.7 0 .7-.6 1.4-1.3 1.5-1.1.1-2.7-.4-4.2-1.8-1.5-1.4-2.3-3-2.4-4.2 0-.5.1-.9.3-1.3Z" fill="currentColor" />
+              </svg>
+              Cotizar por WhatsApp
+            </a>
+          </div>
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Calle%20183%20N%2065-75%20Bogot%C3%A1%20DC"
+            target="_blank"
+            rel="noopener"
+            aria-label="Abrir ubicación en Google Maps"
+          >
+            <strong>Cómo llegar</strong>
+            <span>Calle 183 N 65-75, Bogotá, DC</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© 2026 VIVERO SAN JOSE</span>
+        <span>Venta de plantas y bultos de tierra en Bogotá, DC</span>
+      </div>
+    </footer>
+
+    <a
+      class="wa-button float-wa"
+      href="https://wa.me/573115176962?text=Hola%2C%20quiero%20comprar%20en%20VIVERO%20NUEVO%20SAN%20JOSE."
+      target="_blank"
+      rel="noopener"
+      aria-label="Abrir WhatsApp"
+      title="WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+        <path d="M19 11.7a7.1 7.1 0 0 1-10.5 6.2L5 19l1.1-3.4A7.1 7.1 0 1 1 19 11.7Z" stroke="currentColor" stroke-width="2" />
+        <path d="M9.4 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2.1.4-.1.6l-.4.5c.6 1 1.4 1.8 2.5 2.4l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.2.4.4.4.7 0 .7-.6 1.4-1.3 1.5-1.1.1-2.7-.4-4.2-1.8-1.5-1.4-2.3-3-2.4-4.2 0-.5.1-.9.3-1.3Z" fill="currentColor" />
+      </svg>
+    </a>
+  </body>
+</html>
